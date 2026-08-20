@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<title>Ане — 31</title>
+<style>
+:root{
+  --ink:#1E2C38;
+  --ink2:#5C7183;
+  --ink3:#8CA0AF;
+  --sky:#E6EFF4;
+  --sky2:#D2E2EC;
+  --cotton:#FCFDFE;
+  --twine:#B6A182;
+  --twine-d:#96815F;
+  --denim:#4E7695;
+  --powder:#D9A3AD;
+  --display:"Trebuchet MS","Segoe UI",system-ui,sans-serif;
+  --body:Georgia,"Times New Roman",serif;
+  --rail:52px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:hidden}
+body{
+  margin:0;
+  background:var(--sky);
+  background-image:
+    radial-gradient(120% 60% at 50% -10%, #F7FBFD 0%, rgba(247,251,253,0) 60%),
+    linear-gradient(180deg,#EDF4F8 0%,#E6EFF4 40%,#DFEBF2 100%);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.62;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+
+/* ---------- общие ---------- */
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+.eyebrow{
+  font-family:var(--display);
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink3);font-weight:700;margin:0 0 14px;
+}
+h2.chapter{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:clamp(23px,6vw,30px);
+  letter-spacing:-.02em;
+  line-height:1.2;
+  margin:0 0 6px;
+}
+.chapter-note{color:var(--ink2);font-size:15px;margin:0;font-style:italic}
+
+/* ---------- герой ---------- */
+.hero{position:relative;padding:26px 0 40px;text-align:center;overflow:hidden}
+.hero-line{position:relative;height:190px;margin-bottom:26px}
+.hero-line svg{position:absolute;inset:0;width:100%;height:60px;overflow:visible}
+.pegged{
+  position:absolute;top:20px;display:flex;justify-content:center;width:100%;
+  gap:clamp(10px,4vw,26px);align-items:flex-start;
+}
+.hang{
+  position:relative;background:var(--cotton);padding:6px 6px 16px;
+  box-shadow:0 6px 18px rgba(30,44,56,.16);
+  transform-origin:top center;
+  animation:sway 7s ease-in-out infinite;
+}
+.hang:nth-child(2){animation-delay:-2.3s;margin-top:14px}
+.hang:nth-child(3){animation-delay:-4.6s;margin-top:4px}
+.hang .ph{width:88px;width:clamp(72px,22vw,104px)}
+@keyframes sway{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
+.peg{
+  position:absolute;width:11px;height:24px;border-radius:3px;
+  background:linear-gradient(180deg,#D9C39C,#BFA274);
+  box-shadow:0 1px 3px rgba(30,44,56,.35);
+  z-index:3;
+}
+.peg::after{
+  content:"";position:absolute;left:50%;top:5px;width:1px;height:14px;
+  background:rgba(90,68,38,.35);transform:translateX(-.5px);
+}
+.hang .peg{top:-11px;left:50%;margin-left:-5.5px}
+.hero h1{
+  font-family:var(--display);
+  font-size:clamp(34px,10vw,54px);
+  line-height:1.04;letter-spacing:-.035em;font-weight:700;
+  margin:0 0 16px;
+}
+.hero h1 em{font-style:normal;color:var(--denim)}
+.hero p.lead{color:var(--ink2);margin:0 auto;max-width:30ch;font-size:16px}
+.scroll-hint{
+  margin-top:34px;font-family:var(--display);font-size:11px;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);
+}
+.scroll-hint span{display:block;font-size:15px;letter-spacing:0;margin-top:6px;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(5px);opacity:1}}
+
+/* ---------- верёвка-таймлайн ---------- */
+.rope{position:relative;padding:10px 0 40px}
+.rope::before{
+  content:"";position:absolute;left:calc(var(--rail) - 30px);top:0;bottom:0;width:5px;
+  background:var(--twine);
+  background-image:
+    repeating-linear-gradient(155deg,rgba(255,255,255,.35) 0 3px,rgba(120,98,64,.35) 3px 7px);
+  border-radius:2px;
+  box-shadow:1px 0 4px rgba(30,44,56,.12);
+}
+.rail{position:relative;padding-left:var(--rail)}
+
+.item{position:relative;margin:0 0 30px}
+.tag{
+  position:relative;display:inline-block;background:#F4E9D5;
+  border:1px solid #E2D2B4;
+  padding:9px 15px 10px;margin-bottom:20px;
+  box-shadow:0 3px 10px rgba(30,44,56,.1);
+  transform:rotate(-1.4deg);
+}
+.tag .peg{top:-12px;left:-30px;transform:rotate(-16deg)}
+.tag h2.chapter{margin-bottom:2px}
+
+.card{
+  position:relative;background:var(--cotton);padding:9px 9px 0;
+  box-shadow:0 8px 24px rgba(30,44,56,.14);
+  transform:rotate(-.7deg);
+}
+.item:nth-child(even) .card{transform:rotate(.8deg)}
+.card .peg{top:-13px;left:-32px;transform:rotate(-14deg)}
+.item:nth-child(even) .card .peg{transform:rotate(12deg)}
+.ph{
+  background-color:var(--sky2);
+  position:relative;height:0;padding-bottom:133.33%;
+  overflow:hidden;
+}
+.ph>img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;display:block;
+}
+.ph.wide{padding-bottom:75%}
+.ph.sq{padding-bottom:100%}
+.cap{
+  font-size:14.5px;line-height:1.5;color:var(--ink2);
+  padding:12px 4px 14px;margin:0;
+}
+.cap b{color:var(--ink);font-weight:400;font-style:italic}
+
+/* видео */
+.vidbox{position:relative}
+.vidbox video{width:100%;display:block;background:var(--sky2)}
+.snd{
+  position:absolute;right:12px;bottom:12px;
+  font-family:var(--display);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  background:rgba(30,44,56,.62);color:#fff;border:0;border-radius:999px;
+  padding:11px 16px;min-height:44px;cursor:pointer;
+  -webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);
+}
+.snd:hover{background:rgba(30,44,56,.8)}
+
+/* цитата */
+.quote{
+  background:var(--cotton);padding:26px 22px 22px;
+  box-shadow:0 8px 24px rgba(30,44,56,.14);
+  transform:rotate(.6deg);position:relative;
+}
+.quote .peg{top:-13px;left:-32px;transform:rotate(11deg)}
+.quote p{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(20px,5.4vw,26px);line-height:1.25;letter-spacing:-.02em;
+  margin:0 0 14px;
+}
+.quote small{display:block;color:var(--ink2);font-size:14.5px;line-height:1.55;font-style:italic}
+
+/* сетка мелких фото */
+.grid{display:flex;flex-wrap:wrap;gap:14px}
+.grid .print{width:calc(50% - 7px)}
+.grid .print{
+  background:var(--cotton);padding:6px 6px 0;
+  box-shadow:0 5px 14px rgba(30,44,56,.13);
+}
+.grid .print:nth-child(3n){transform:rotate(1deg)}
+.grid .print:nth-child(3n+1){transform:rotate(-1.2deg)}
+.grid .print .ph{padding-bottom:120%}
+.grid .print p{font-size:12.5px;color:var(--ink2);margin:0;padding:8px 2px 9px;line-height:1.4}
+
+/* ---------- счётчик ---------- */
+.counter{display:flex;flex-wrap:wrap;gap:10px}
+.tick{
+  flex:1 1 0;min-width:96px;text-align:center;
+  background:#F4E9D5;border:1px solid #E2D2B4;
+  padding:14px 8px 12px;
+  box-shadow:0 4px 12px rgba(30,44,56,.1);
+}
+.tick:nth-child(1){transform:rotate(-1.2deg)}
+.tick:nth-child(3){transform:rotate(1.1deg)}
+.tick b{
+  display:block;font-family:var(--display);font-weight:700;
+  font-size:clamp(26px,7vw,34px);letter-spacing:-.03em;line-height:1;
+  color:var(--ink);
+}
+.tick span{
+  display:block;margin-top:7px;font-family:var(--display);
+  font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#9C8A6C;
+}
+.counter-note{margin:12px 2px 0;font-size:13.5px;font-style:italic;color:var(--ink2)}
+
+/* ---------- словарь ---------- */
+.dict{display:flex;flex-direction:column;gap:9px}
+.dict details{
+  background:var(--cotton);border:1px solid #E4EDF3;border-radius:3px;
+  box-shadow:0 4px 12px rgba(30,44,56,.08);
+}
+.dict summary{
+  list-style:none;cursor:pointer;padding:14px 42px 14px 16px;position:relative;
+  font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.01em;
+}
+.dict summary::-webkit-details-marker{display:none}
+.dict summary::after{
+  content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-family:var(--display);font-weight:400;font-size:20px;color:var(--ink3);
+}
+.dict details[open] summary::after{content:"–"}
+.dict p{margin:0;padding:0 16px 16px;font-size:15px;line-height:1.6;color:var(--ink2)}
+.dict p em{color:var(--ink)}
+
+/* ---------- бирка ---------- */
+.label-tag{
+  background:var(--cotton);border:1px dashed #C7D6E0;
+  padding:22px 18px 20px;text-align:center;
+  box-shadow:0 6px 18px rgba(30,44,56,.1);
+  font-family:var(--display);
+}
+.label-tag h3{
+  font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--ink3);margin:0 0 14px;font-weight:700;
+}
+.label-tag .comp{
+  font-size:15.5px;line-height:1.6;margin:0 0 18px;font-weight:700;letter-spacing:-.01em;
+}
+.label-tag ul{
+  list-style:none;margin:0 0 16px;padding:16px 0 0;border-top:1px dashed #DCE7EE;
+  font-size:13.5px;line-height:1.75;color:var(--ink2);text-align:left;
+}
+.label-tag li{padding-left:20px;position:relative}
+.label-tag li::before{
+  content:"×";position:absolute;left:4px;color:var(--powder);font-size:15px;
+}
+.label-tag li.ok::before{content:"✓";color:#7FA98A}
+.label-tag .made{
+  font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin:0;
+}
+
+/* ---------- чертёж дома ---------- */
+.blueprint{
+  background:#1C3A52;padding:16px 14px 14px;
+  box-shadow:0 10px 28px rgba(30,44,56,.22);
+}
+.blueprint svg{width:100%;height:auto;display:block}
+.bp-title{
+  display:flex;flex-wrap:wrap;
+  border-top:1px solid rgba(187,216,234,.3);
+  margin-top:12px;padding-top:11px;
+}
+.bp-title div{
+  flex:1 1 33%;padding-right:12px;
+  font-family:var(--display);font-size:9.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:#8FB4CC;
+}
+.bp-title div b{display:block;color:#DCEBF5;font-weight:700;margin-top:3px;letter-spacing:.06em}
+.bp-legend{margin:16px 0 0;padding:0;list-style:none}
+.bp-legend li{
+  position:relative;padding:0 0 9px 30px;
+  font-size:14.5px;line-height:1.5;color:var(--ink2);
+}
+.bp-legend li b{
+  position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;
+  background:var(--denim);color:#fff;
+  font-family:var(--display);font-size:11px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* ---------- записка от Рокки ---------- */
+.note{
+  position:relative;background:#FBF6EC;
+  border:1px solid #EFE3CE;
+  padding:24px 20px 20px;
+  box-shadow:0 8px 24px rgba(30,44,56,.13);
+  transform:rotate(.7deg);
+}
+.note .peg{top:-13px;left:-32px;transform:rotate(12deg)}
+.note-photo{
+  background:#fff;padding:6px 6px 0;margin:0 0 16px;
+  box-shadow:0 3px 10px rgba(30,44,56,.12);
+}
+.note-photo .ph{padding-bottom:73%}
+.note-photo p{
+  font-family:var(--display);font-size:9.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:#A08E6E;margin:0;padding:8px 2px 9px;font-style:normal;
+}
+.note h3{
+  font-family:var(--display);font-weight:700;font-size:16px;
+  letter-spacing:-.01em;margin:0 0 4px;
+}
+.note .from{
+  font-family:var(--display);font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:#A08E6E;margin:0 0 16px;
+}
+.note p{margin:0 0 13px;font-size:15.5px;line-height:1.65;font-style:italic;color:#4A5A67}
+.note .sign-row{display:flex;align-items:center;gap:10px;margin-top:18px}
+.note .sign-row span{
+  font-family:var(--display);font-weight:700;font-size:15px;color:var(--ink);
+}
+.note svg{flex:0 0 auto}
+
+/* ---------- лев и дева ---------- */
+.signs{display:flex;flex-wrap:wrap;gap:12px}
+.sign-card{
+  flex:1 1 0;min-width:150px;background:var(--cotton);
+  padding:18px 16px 16px;box-shadow:0 6px 18px rgba(30,44,56,.1);
+}
+.sign-card:first-child{border-top:3px solid var(--denim)}
+.sign-card:last-child{border-top:3px solid var(--powder)}
+.sign-card h3{
+  font-family:var(--display);font-size:11px;letter-spacing:.2em;
+  text-transform:uppercase;margin:0 0 12px;color:var(--ink3);font-weight:700;
+}
+.sign-card ul{margin:0;padding:0;list-style:none}
+.sign-card li{
+  font-size:14.5px;line-height:1.5;color:var(--ink2);
+  padding:0 0 10px 14px;position:relative;
+}
+.sign-card li::before{
+  content:"";position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;
+  background:var(--sky2);
+}
+.sign-card:first-child li::before{background:var(--denim);opacity:.5}
+.sign-card:last-child li::before{background:var(--powder);opacity:.6}
+.signs-sum{
+  margin:16px 0 0;font-size:15.5px;line-height:1.6;font-style:italic;color:var(--ink);
+}
+
+/* ---------- предсказание ---------- */
+.fortune-sec{padding:6px 0 34px}
+.fortune{
+  background:var(--cotton);padding:26px 22px 24px;text-align:center;
+  box-shadow:0 10px 30px rgba(30,44,56,.13);border-radius:4px;
+}
+.fortune .out{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(18px,4.6vw,22px);line-height:1.35;letter-spacing:-.015em;
+  margin:0 0 20px;min-height:2.7em;display:flex;align-items:center;justify-content:center;
+}
+.fortune .out.dim{font-family:var(--body);font-weight:400;font-size:16px;color:var(--ink2);font-style:italic}
+.fortune button{
+  font-family:var(--display);font-weight:700;font-size:12.5px;
+  letter-spacing:.14em;text-transform:uppercase;
+  background:var(--powder);color:#fff;border:0;border-radius:3px;
+  padding:14px 24px;cursor:pointer;
+}
+.fortune button:hover{background:#C88E99}
+
+/* ---------- квиз ---------- */
+.quiz-sec{padding:34px 0 44px}
+.quizcard{
+  background:var(--cotton);border-radius:4px;
+  box-shadow:0 10px 30px rgba(30,44,56,.15);
+  padding:24px 20px 22px;
+}
+.dots{display:flex;gap:6px;margin-bottom:18px}
+.dots i{height:3px;flex:1;background:var(--sky2);border-radius:2px;transition:background .3s}
+.dots i.on{background:var(--denim)}
+.qtext{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(18px,4.8vw,22px);line-height:1.3;letter-spacing:-.015em;
+  margin:0 0 18px;
+}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{
+  font-family:var(--body);font-size:16px;text-align:left;
+  background:#F3F8FB;border:1px solid #DDE9F0;border-radius:3px;
+  padding:13px 15px;cursor:pointer;color:var(--ink);
+  transition:background .15s,border-color .15s,transform .1s;
+}
+.opt:hover:not(:disabled){background:#E9F2F7;border-color:#C6DAE6}
+.opt:active:not(:disabled){transform:scale(.99)}
+.opt.right{background:#E4F0E6;border-color:#B6D5BB}
+.opt.wrong{background:#F7E7E9;border-color:#E3BFC5}
+.opt:disabled{cursor:default}
+.fb{
+  margin:16px 0 0;padding-top:15px;border-top:1px solid #E6EEF3;
+  font-size:15px;color:var(--ink2);line-height:1.55;
+}
+.fb b{color:var(--ink);font-weight:400;font-style:italic}
+.next{
+  margin-top:16px;width:100%;
+  font-family:var(--display);font-weight:700;font-size:13px;
+  letter-spacing:.12em;text-transform:uppercase;
+  background:var(--denim);color:#fff;border:0;border-radius:3px;
+  padding:14px;cursor:pointer;
+}
+.next:hover{background:#3F6482}
+.score{font-family:var(--display);font-size:44px;font-weight:700;letter-spacing:-.03em;margin:0 0 8px}
+.score small{font-size:18px;color:var(--ink3)}
+.again{
+  margin-top:18px;background:none;border:1px solid #CFDEE8;color:var(--ink2);
+  font-family:var(--display);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  padding:13px 20px;min-height:44px;border-radius:3px;cursor:pointer;
+}
+.again:hover{background:#F1F7FA}
+.hidden{display:none}
+
+/* ---------- письмо ---------- */
+.letter-sec{padding:10px 0 60px}
+.letter{
+  background:var(--cotton);padding:34px 24px 30px;position:relative;
+  box-shadow:0 14px 40px rgba(30,44,56,.16);
+}
+.letter::before{
+  content:"";position:absolute;left:0;right:0;top:0;height:3px;
+  background:linear-gradient(90deg,var(--powder),var(--denim));
+}
+.letter h2{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(24px,6.4vw,32px);letter-spacing:-.03em;margin:0 0 20px;
+}
+.letter p{margin:0 0 17px;font-size:17px;line-height:1.7}
+.letter p.sign{
+  margin-top:26px;font-style:italic;color:var(--denim);font-size:18px;
+}
+.foot{
+  text-align:center;padding:30px 0 46px;
+  font-family:var(--display);font-size:11px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ink3);
+}
+
+/* появление */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (hover:hover) and (min-width:700px){
+  body{background-attachment:fixed}
+}
+@media (min-width:700px){
+  :root{--rail:86px}
+  body{font-size:18px}
+  .wrap{max-width:700px}
+  .grid{gap:18px}
+  .grid .print{width:calc(50% - 9px)}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+:focus-visible{outline:2px solid var(--denim);outline-offset:3px}
+
+/* ---------- финал: торт ---------- */
+.cake-sec{padding:50px 0 76px;text-align:center;position:relative}
+.cake-stage{position:relative;margin-top:26px;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.cake{position:relative;width:236px;height:330px;margin:0 auto;box-sizing:border-box;overflow:hidden;isolation:isolate;cursor:pointer}
+.cake.wob{animation:cakeShake .55s ease}
+@keyframes cakeShake{
+  0%,100%{transform:translateX(0) rotate(0)}
+  18%{transform:translateX(-7px) rotate(-2deg)}
+  42%{transform:translateX(7px) rotate(2deg)}
+  68%{transform:translateX(-4px) rotate(-1deg)}
+}
+.cake .table-shadow{position:absolute;z-index:0;left:50%;bottom:19px;width:198px;height:18px;
+  transform:translateX(-50%);border-radius:50%;background:rgba(30,44,56,.14);filter:blur(10px)}
+.cake .plate{position:absolute;z-index:1;left:50%;bottom:27px;width:218px;height:27px;
+  transform:translateX(-50%);border-radius:50%;
+  background:linear-gradient(180deg,#ffffff 0%,#f7f4f1 55%,#e7e2de 100%);
+  border:1px solid rgba(30,44,56,.07);
+  box-shadow:0 5px 8px rgba(30,44,56,.09),inset 0 2px 3px rgba(255,255,255,.95)}
+.cake .plate::after{content:"";position:absolute;left:50%;top:6px;width:188px;height:11px;
+  transform:translateX(-50%);border-radius:50%;border:1px solid rgba(182,161,130,.13)}
+.cake .plate::before{content:"";position:absolute;left:50%;top:18px;width:72px;height:7px;
+  transform:translateX(-50%);border-radius:50%;background:rgba(210,205,201,.45)}
+.cake .tier-bottom{position:absolute;z-index:3;left:50%;bottom:48px;width:185px;height:101px;
+  transform:translateX(-50%);box-sizing:border-box;border-radius:15px 15px 17px 17px;
+  background:linear-gradient(100deg,#f5eee8 0%,#FDF7F3 25%,#fffaf7 58%,#f1e8e2 100%);
+  border:1px solid rgba(30,44,56,.055);
+  box-shadow:0 8px 13px rgba(30,44,56,.08),inset 3px 0 5px rgba(255,255,255,.5),inset -4px 0 7px rgba(210,195,188,.14)}
+.cake .tier-top{position:absolute;z-index:4;left:50%;bottom:136px;width:139px;height:88px;
+  transform:translateX(-50%);box-sizing:border-box;border-radius:14px 14px 15px 15px;
+  background:linear-gradient(100deg,#f4ede7 0%,#FDF7F3 25%,#fffaf7 57%,#f0e6df 100%);
+  border:1px solid rgba(30,44,56,.055);
+  box-shadow:0 7px 11px rgba(30,44,56,.08),inset 3px 0 5px rgba(255,255,255,.52),inset -4px 0 7px rgba(210,195,188,.13)}
+.cake .icing-bottom{position:absolute;z-index:7;left:50%;bottom:128px;width:185px;height:22px;
+  transform:translateX(-50%);border-radius:11px 11px 5px 5px;
+  background:linear-gradient(105deg,#d39aa5 0%,#D9A3AD 38%,#e0adb5 63%,#ce929e 100%);
+  box-shadow:inset 0 2px 2px rgba(255,255,255,.38),0 2px 4px rgba(30,44,56,.07)}
+.cake .icing-top{position:absolute;z-index:8;left:50%;bottom:211px;width:139px;height:20px;
+  transform:translateX(-50%);border-radius:10px 10px 5px 5px;
+  background:linear-gradient(105deg,#d39aa5 0%,#D9A3AD 42%,#e0adb5 65%,#cf929e 100%);
+  box-shadow:inset 0 2px 2px rgba(255,255,255,.38),0 2px 4px rgba(30,44,56,.07)}
+.cake .drip{position:absolute;top:12px;display:block;border-radius:0 0 8px 8px;
+  background:linear-gradient(90deg,#d098a3,#D9A3AD 45%,#d49aa5);
+  box-shadow:inset 1px 0 rgba(255,255,255,.2),1px 2px 3px rgba(30,44,56,.06)}
+.cake .icing-bottom .drip:nth-child(1){left:9px;width:10px;height:22px}
+.cake .icing-bottom .drip:nth-child(2){left:42px;width:11px;height:40px}
+.cake .icing-bottom .drip:nth-child(3){left:78px;width:10px;height:18px}
+.cake .icing-bottom .drip:nth-child(4){left:111px;width:11px;height:50px}
+.cake .icing-bottom .drip:nth-child(5){left:145px;width:10px;height:31px}
+.cake .icing-bottom .drip:nth-child(6){left:171px;width:9px;height:18px}
+.cake .icing-top .drip:nth-child(1){left:8px;width:9px;height:31px}
+.cake .icing-top .drip:nth-child(2){left:36px;width:10px;height:51px}
+.cake .icing-top .drip:nth-child(3){left:69px;width:10px;height:25px}
+.cake .icing-top .drip:nth-child(4){left:101px;width:10px;height:43px}
+.cake .icing-top .drip:nth-child(5){left:128px;width:8px;height:20px}
+.cake .beads{position:absolute;z-index:9;left:50%;bottom:45px;width:172px;height:11px;
+  transform:translateX(-50%);display:flex;align-items:center;justify-content:space-between;padding:0 2px;box-sizing:border-box}
+.cake .beads span{display:block;width:7px;height:7px;flex:0 0 7px;border-radius:50%;
+  background:radial-gradient(circle at 35% 28%,#eee3d1 0%,#cbb99c 55%,#ae9a79 100%);
+  box-shadow:0 1px 2px rgba(30,44,56,.14),inset 1px 1px 1px rgba(255,255,255,.75)}
+.cake .upper-beads{position:absolute;z-index:10;left:50%;bottom:125px;width:132px;height:10px;
+  transform:translateX(-50%);display:flex;justify-content:space-between;align-items:center}
+.cake .upper-beads span{display:block;width:6px;height:6px;border-radius:50%;
+  background:radial-gradient(circle at 35% 28%,#eee3d1 0%,#c8b597 60%,#aa9676 100%);
+  box-shadow:0 1px 2px rgba(30,44,56,.13),inset 1px 1px rgba(255,255,255,.75)}
+.cake .cake-highlight-top{position:absolute;z-index:11;left:50%;bottom:219px;width:116px;height:2px;
+  transform:translateX(-50%);border-radius:50%;background:rgba(255,255,255,.48)}
+.cake .cake-highlight-bottom{position:absolute;z-index:11;left:50%;bottom:136px;width:157px;height:2px;
+  transform:translateX(-50%);border-radius:50%;background:rgba(255,255,255,.4)}
+.cake .candles{position:absolute;z-index:15;left:50%;bottom:215px;width:92px;height:92px;transform:translateX(-50%)}
+.cake .candle{position:absolute;bottom:0;width:8px;border-radius:4px 4px 2px 2px;
+  background:linear-gradient(90deg,#d18f9a 0%,#eebcc4 45%,#f2c7cd 60%,#d28f9b 100%);
+  box-shadow:1px 2px 4px rgba(30,44,56,.12),inset 1px 0 rgba(255,255,255,.45)}
+.cake .candle::after{content:"";position:absolute;left:2px;top:3px;width:1px;height:calc(100% - 7px);
+  border-radius:1px;background:rgba(255,255,255,.55)}
+.cake .candle::before{content:"";position:absolute;left:50%;top:-7px;width:1px;height:8px;
+  transform:translateX(-50%);background:#2d2b28;border-radius:1px}
+.cake .candle:nth-child(1){left:12px;height:63px}
+.cake .candle:nth-child(2){left:42px;height:70px}
+.cake .candle:nth-child(3){left:72px;height:63px}
+.cake .flame{position:absolute;z-index:3;left:50%;top:-30px;width:12px;height:21px;
+  transform:translateX(-50%);transform-origin:50% 90%;border-radius:55% 45% 55% 45%;
+  background:radial-gradient(ellipse at 50% 72%,#fffdf0 0%,#fff3bd 27%,#f6c96c 48%,#e9a04c 70%,rgba(233,160,76,0) 72%);
+  filter:drop-shadow(0 0 4px rgba(246,190,91,.75)) drop-shadow(0 0 9px rgba(246,190,91,.25));
+  animation:candle-flame 1.05s ease-in-out infinite alternate;
+  transition:opacity .45s ease,transform .45s ease}
+.cake .candle:nth-child(1) .flame{animation-delay:-.2s}
+.cake .candle:nth-child(2) .flame{animation-delay:-.65s}
+.cake .candle:nth-child(3) .flame{animation-delay:-.4s}
+.cake .candle.out .flame{opacity:0;transform:translateX(-50%) translateY(5px) scale(.2);animation:none}
+@keyframes candle-flame{
+  0%{transform:translateX(-50%) rotate(-4deg) scale(.94);filter:drop-shadow(0 0 3px rgba(246,190,91,.62)) drop-shadow(0 0 6px rgba(246,190,91,.18))}
+  50%{transform:translateX(-50%) rotate(2deg) scale(1)}
+  100%{transform:translateX(-50%) rotate(4deg) scale(1.07);filter:drop-shadow(0 0 7px rgba(246,190,91,.9)) drop-shadow(0 0 13px rgba(246,190,91,.28))}
+}
+.cake .puff{position:absolute;z-index:1;left:50%;top:-18px;width:6px;height:10px;transform:translateX(-50%);
+  border-radius:50%;background:rgba(255,255,255,.7);opacity:0;pointer-events:none}
+.cake .candle.out .puff{animation:puff 1.6s ease-out forwards}
+@keyframes puff{
+  0%{opacity:.8;transform:translateX(-50%) translateY(0) scale(.6)}
+  100%{opacity:0;transform:translateX(-50%) translateY(-40px) scale(2.4)}
+}
+.shake-hint{
+  font-family:var(--display);font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+  font-weight:700;color:var(--ink3);margin:26px 0 0;display:inline-flex;align-items:center;gap:8px}
+.shake-hint .ic{font-size:18px;letter-spacing:0;display:inline-block;animation:shakeIc 1.1s ease-in-out infinite}
+@keyframes shakeIc{0%,100%{transform:translateX(-4px) rotate(-9deg)}50%{transform:translateX(4px) rotate(9deg)}}
+.shake-hint.calm .ic{animation:none}
+.perm-btn{
+  font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.06em;
+  margin-top:18px;padding:12px 22px;min-height:44px;border:0;border-radius:2px;
+  background:var(--denim);color:#fff;box-shadow:0 6px 16px rgba(30,44,56,.22);cursor:pointer}
+.wish{
+  position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;
+  padding:26px;background:rgba(230,239,244,.86);-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px);
+  opacity:0;pointer-events:none;transition:opacity .5s ease}
+.wish.on{opacity:1;pointer-events:auto}
+.wish-card{
+  max-width:430px;background:var(--cotton);padding:32px 26px 26px;
+  box-shadow:0 18px 44px rgba(30,44,56,.22);transform:translateY(14px) rotate(-.6deg);
+  transition:transform .5s ease;text-align:left}
+.wish.on .wish-card{transform:translateY(0) rotate(-.6deg)}
+.wish-card .n{font-family:var(--display);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--twine-d);font-weight:700;margin:0 0 12px}
+.wish-card p{margin:0 0 14px;font-size:17.5px;line-height:1.66}
+.wish-card p:last-of-type{margin-bottom:0}
+.wish-card .tap{font-family:var(--display);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink3);font-weight:700;margin:22px 0 0}
+</style>
+</head>
+<body>
+
+<header class="hero">
+<canvas id="confetti" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:20"></canvas>
+  <div class="wrap">
+    <div class="hero-line">
+      <svg viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M-10 12 Q200 46 410 12" fill="none" stroke="#B6A182" stroke-width="2.5"/>
+        <path d="M-10 13.5 Q200 47.5 410 13.5" fill="none" stroke="#96815F" stroke-width="1" stroke-dasharray="5 4"/>
+      </svg>
+      <div class="pegged">
+        <div class="hang"><span class="peg"></span><div class="ph"><img src="../assets/photo-01.jpg" alt="Мироша и Агата в солнечных очках" loading="eager" fetchpriority="high" decoding="async"></div></div>
+        <div class="hang"><span class="peg"></span><div class="ph"><img src="../assets/photo-19.jpg" alt="Агата обнимает Мирошу" loading="eager" fetchpriority="high" decoding="async"></div></div>
+        <div class="hang"><span class="peg"></span><div class="ph"><img src="../assets/photo-21.jpg" alt="Мироша обнимает Рокки" loading="eager" fetchpriority="high" decoding="async"></div></div>
+      </div>
+    </div>
+    <p class="eyebrow">23 августа &nbsp;·&nbsp; Ане 31</p>
+    <h1>С днём рождения,<br><em>любимка</em></h1>
+    <p class="lead">Здесь развешано всё самое важное за эти полтора года. Осторожно, только что из стирки.</p>
+    <p class="scroll-hint">листай<span>↓</span></p>
+  </div>
+</header>
+
+<main>
+<section class="rope">
+  <div class="wrap"><div class="rail">
+
+    <div class="item rv">
+      <div class="tag"><span class="peg"></span>
+        <h2 class="chapter">Сначала была Чита</h2>
+        <p class="chapter-note">23 августа 1995 года</p>
+      </div>
+      <div class="card"><span class="peg"></span>
+        <div class="ph"><img src="../assets/photo-04.jpg" alt="Аня в детстве" loading="lazy" decoding="async"></div>
+        <p class="cap">Ещё не мама и ещё не главный чистюля страны. Но взгляд уже такой, будто <b>кто-то не разулся в коридоре</b>.</p>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="card"><span class="peg"></span>
+        <div class="ph wide"><img src="../assets/photo-05.jpg" alt="Аня и Ваня в Риме" loading="lazy" decoding="async"></div>
+        <p class="cap">Потом на работе появился Ваня. Восемь лет назад. С тех пор вы вместе — от офиса до Колизея.</p>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="card"><span class="peg"></span>
+        <div class="ph"><img src="../assets/photo-06.jpg" alt="Аня с новорождённым Мирошей" loading="lazy" decoding="async"></div>
+        <p class="cap">А потом появился он. <b>Сыночка-корзиночка.</b></p>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="tag"><span class="peg"></span>
+        <h2 class="chapter">И тут пришла я</h2>
+        <p class="chapter-note">полтора года назад, на прогулке</p>
+      </div>
+      <div class="quote"><span class="peg"></span>
+        <p>«Я Влада, теперь мы&nbsp;гуляем вместе»</p>
+        <small>Так, по твоей версии событий, началась наша дружба. Спорить не буду — пусть будет так.</small>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="counter">
+        <div class="tick"><b id="c-days">—</b><span>дней вместе</span></div>
+        <div class="tick"><b id="c-walks">—</b><span>прогулок</span></div>
+        <div class="tick"><b id="c-km">—</b><span>км с колясками</span></div>
+      </div>
+      <p class="counter-note">Считаем с 2 февраля 2025 года. Прогулки и километры — по самым скромным оценкам, на деле их было больше.</p>
+    </div>
+
+    <div class="item rv">
+      <div class="card"><span class="peg"></span>
+        <div class="ph"><img src="../assets/photo-07.jpg" alt="Мироша и Агата сидят на полу" loading="lazy" decoding="async"></div>
+        <p class="cap">Двое на полу, две мамы рядом и полное непонимание, что делать дальше. Зато вместе.</p>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="card"><span class="peg"></span>
+        <div class="vidbox">
+          <video src="../assets/video-1.mp4" poster="../assets/poster-1.jpg" autoplay muted loop playsinline preload="none"></video>
+          <button class="snd" type="button" data-snd>звук</button>
+        </div>
+        <p class="cap">Первые переговоры на ковре. Тема встречи — книжка.</p>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="tag"><span class="peg"></span>
+        <h2 class="chapter">Мироша, философ</h2>
+        <p class="chapter-note">пофиг + пофиг</p>
+      </div>
+      <div class="card"><span class="peg"></span>
+        <div class="ph wide"><img src="../assets/photo-08.jpg" alt="Мироша лежит под кроватью" loading="lazy" decoding="async"></div>
+        <p class="cap">Под кроватью. Просто потому что можно.</p>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="grid">
+        <div class="print"><div class="ph"><img src="../assets/photo-09.jpg" alt="Мироша в маске" loading="lazy" decoding="async"></div><p>Человек-паук на минималках</p></div>
+        <div class="print"><div class="ph"><img src="../assets/photo-10.jpg" alt="Мироша у роз" loading="lazy" decoding="async"></div><p>Позировать он не любит</p></div>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="tag"><span class="peg"></span>
+        <h2 class="chapter">Мы гуляли. Всегда</h2>
+        <p class="chapter-note">снег, песок, самокаты, мяч</p>
+      </div>
+      <div class="grid">
+        <div class="print"><div class="ph"><img src="../assets/photo-11.jpg" alt="Дети на санках" loading="lazy" decoding="async"></div><p>Зима. Он везёт, она едет</p></div>
+        <div class="print"><div class="ph"><img src="../assets/photo-12.jpg" alt="Дети сидят рядом" loading="lazy" decoding="async"></div><p>Греемся</p></div>
+        <div class="print"><div class="ph"><img src="../assets/photo-13.jpg" alt="Аня с детьми в парке" loading="lazy" decoding="async"></div><p>Ты — с двумя. Как обычно</p></div>
+        <div class="print"><div class="ph"><img src="../assets/photo-14.jpg" alt="Дети в песочнице" loading="lazy" decoding="async"></div><p>Песок. Твой личный ад</p></div>
+        <div class="print"><div class="ph"><img src="../assets/photo-15.jpg" alt="Агата с самокатом и Мироша" loading="lazy" decoding="async"></div><p>Первый транспорт</p></div>
+        <div class="print"><div class="ph"><img src="../assets/photo-16.jpg" alt="Мироша с мячом на площадке" loading="lazy" decoding="async"></div><p>Мяч важнее всех</p></div>
+        <div class="print"><div class="ph"><img src="../assets/photo-17.jpg" alt="Дети сидят на ступеньке" loading="lazy" decoding="async"></div><p>Две секунды спокойствия</p></div>
+        <div class="print"><div class="ph"><img src="../assets/photo-18.jpg" alt="Дети идут по коридору" loading="lazy" decoding="async"></div><p>Ушли по своим делам</p></div>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="tag"><span class="peg"></span>
+        <h2 class="chapter">Мими, обнимемся?</h2>
+        <p class="chapter-note">хроника одной любви</p>
+      </div>
+      <div class="card"><span class="peg"></span>
+        <div class="vidbox">
+          <video src="../assets/video-2.mp4" poster="../assets/poster-2.jpg" autoplay muted loop playsinline preload="none"></video>
+          <button class="snd" type="button" data-snd>звук</button>
+        </div>
+        <p class="cap">Агата бежит обниматься. Мироша убегает. Но глазками стреляет.</p>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="card"><span class="peg"></span>
+        <div class="ph"><img src="../assets/photo-19.jpg" alt="Агата обнимает Мирошу" loading="lazy" decoding="async"></div>
+        <p class="cap">Иногда она всё-таки его догоняет.</p>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="card"><span class="peg"></span>
+        <div class="ph"><img src="../assets/photo-20.jpg" alt="Мироша и Агата стоят рядом" loading="lazy" decoding="async"></div>
+        <p class="cap"><b>Жених и невеста.</b> Мы же договорились.</p>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="tag"><span class="peg"></span>
+        <h2 class="chapter">Твои люди</h2>
+        <p class="chapter-note">и одна собака</p>
+      </div>
+      <div class="card"><span class="peg"></span>
+        <div class="ph sq"><img src="../assets/photo-21.jpg" alt="Мироша и Рокки на диване" loading="lazy" decoding="async"></div>
+        <p class="cap">Рокки. Самый впечатлительный член семьи: стоит Мироше заплакать, а тебе сказать <b>«ну емае»</b> — его уже нет в комнате.</p>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="note"><span class="peg"></span>
+        <div class="note-photo">
+          <div class="ph"><img src="../assets/photo-22.jpg" alt="Рокки" loading="lazy" decoding="async"></div>
+          <p>автор отчёта · на тех самых полах</p>
+        </div>
+        <h3>Отчёт о наблюдении за семьёй</h3>
+        <p class="from">составил Рокки, джек-рассел, пять лет на посту</p>
+        <p>Живу с этими людьми пять лет и заявляю: тут чисто. Пожалуй, даже слишком. Меня моют чаще, чем я считаю разумным, и пахну я ровно тем же, чем все остальные.</p>
+        <p>Я помню времена, когда в этом доме было тихо. Я был тут первым. Теперь об этом никто не вспоминает.</p>
+        <p>Мироша до сих пор считает меня подушкой. Я терплю, потому что он маленький и потому что иногда с ним падает печенье.</p>
+        <p>Когда он плачет, а она говорит «ну ёмае», я ухожу. Не потому что боюсь. Просто вспоминаю, что у меня дела в другой комнате.</p>
+        <p>Но если совсем честно — я бы отсюда никуда не ушёл. Даже если бы очень звали.</p>
+        <div class="sign-row">
+          <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+            <ellipse cx="13" cy="17.5" rx="6.2" ry="5" fill="#B6A182"/>
+            <ellipse cx="6.2" cy="11.5" rx="2.7" ry="3.4" fill="#B6A182"/>
+            <ellipse cx="10.6" cy="7.6" rx="2.6" ry="3.5" fill="#B6A182"/>
+            <ellipse cx="15.9" cy="7.6" rx="2.6" ry="3.5" fill="#B6A182"/>
+            <ellipse cx="20.2" cy="11.6" rx="2.7" ry="3.4" fill="#B6A182"/>
+          </svg>
+          <span>Рокки</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="card"><span class="peg"></span>
+        <div class="ph sq"><img src="../assets/photo-23.jpg" alt="Ваня и Мироша в кафе" loading="lazy" decoding="async"></div>
+        <p class="cap">Ваня и меню. Серьёзный мужской разговор.</p>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="card"><span class="peg"></span>
+        <div class="ph"><img src="../assets/photo-24.jpg" alt="Аня с Мирошей и Агатой" loading="lazy" decoding="async"></div>
+        <p class="cap">А это ты. В самом эпицентре. И почему-то с самыми чистыми полами в мире.</p>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="card"><span class="peg"></span>
+        <div class="ph wide"><img src="../assets/photo-25.jpg" alt="Аня в машине" loading="lazy" decoding="async"></div>
+        <p class="cap">Красивая. Даже когда не спала.</p>
+      </div>
+    </div>
+
+    <div class="item rv">
+      <div class="tag"><span class="peg"></span>
+        <h2 class="chapter">Дом, который строит Аня</h2>
+        <p class="chapter-note">с фундамента и своими руками</p>
+      </div>
+      <div class="card"><span class="peg"></span>
+        <div class="blueprint">
+          <svg viewBox="0 0 400 268" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="План дома">
+            <g fill="none" stroke="#BBD8EA">
+              <!-- сетка -->
+              <g stroke="#3A6180" stroke-width=".5">
+                <path d="M0 40H400M0 80H400M0 120H400M0 160H400M0 200H400M0 240H400"/>
+                <path d="M40 0V268M80 0V268M120 0V268M160 0V268M200 0V268M240 0V268M280 0V268M320 0V268M360 0V268"/>
+              </g>
+              <!-- стены -->
+              <g stroke-width="5" stroke-linecap="square">
+                <rect x="22" y="22" width="356" height="216"/>
+                <path d="M200 22V150M22 150H378M150 150V238M272 150V238"/>
+              </g>
+              <!-- проёмы -->
+              <g stroke="#1C3A52" stroke-width="7">
+                <path d="M200 74V104"/><path d="M96 150H126"/><path d="M196 150H226"/><path d="M300 150H326"/>
+              </g>
+              <g stroke-width="1.2" opacity=".75">
+                <path d="M200 104a30 30 0 0 0 30-30"/>
+                <path d="M126 150a30 30 0 0 1-30 30" transform="translate(0,0)"/>
+              </g>
+              <!-- окна -->
+              <g stroke-width="1.6">
+                <path d="M60 22v0M60 19.5h60M60 24.5h60"/>
+                <path d="M260 19.5h60M260 24.5h60"/>
+                <path d="M375.5 60v50M380.5 60v50"/>
+                <path d="M60 235.5h56M60 240.5h56"/>
+              </g>
+            </g>
+            <!-- метки помещений -->
+            <g fill="#DCEBF5" font-family="Trebuchet MS, sans-serif" font-size="11" letter-spacing="1.4" text-anchor="middle">
+              <text x="111" y="88">ГОСТИНАЯ</text>
+              <text x="289" y="88">КУХНЯ</text>
+              <text x="86" y="198">ДЕТСКАЯ</text>
+              <text x="211" y="198">СПАЛЬНЯ</text>
+              <text x="325" y="192">ПОСТИ-</text>
+              <text x="325" y="205">РОЧНАЯ</text>
+            </g>
+            <!-- номера -->
+            <g font-family="Trebuchet MS, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">
+              <circle cx="325" cy="168" r="9" fill="#E0A9B3"/><text x="325" y="171.5" fill="#1C3A52">1</text>
+              <circle cx="289" cy="112" r="9" fill="#E0A9B3"/><text x="289" y="115.5" fill="#1C3A52">2</text>
+              <circle cx="111" cy="118" r="9" fill="#E0A9B3"/><text x="111" y="121.5" fill="#1C3A52">3</text>
+              <circle cx="86" cy="216" r="9" fill="#E0A9B3"/><text x="86" y="219.5" fill="#1C3A52">4</text>
+            </g>
+            <!-- размеры -->
+            <g stroke="#8FB4CC" stroke-width="1" fill="#8FB4CC" font-family="Trebuchet MS, sans-serif" font-size="9">
+              <path d="M22 254h356M22 250v8M378 250v8"/>
+              <text x="200" y="266" text-anchor="middle">ПО ПРОЕКТУ АНИ</text>
+            </g>
+          </svg>
+          <div class="bp-title">
+            <div>Объект<b>Дом Ани и Вани</b></div>
+            <div>Автор проекта<b>Аня</b></div>
+            <div>Стадия<b>Строится</b></div>
+          </div>
+        </div>
+        <p class="cap">Ты пошла учиться на дизайнера, чтобы самой развести электрику, отопление и воду. Кто-то в декрете смотрит сериалы — <b>ты чертишь схему водоснабжения</b>.</p>
+      </div>
+      <ol class="bp-legend">
+        <li><b>1</b>Постирочная. Сердце дома, проектировалась первой и с особой любовью.</li>
+        <li><b>2</b>Розетки. Посчитаны лично автором проекта, ни одной лишней и ни одной недостающей.</li>
+        <li><b>3</b>Точка, куда будет убегать Рокки. Заложена на этапе фундамента.</li>
+        <li><b>4</b>Комната, в которой когда-нибудь станет тихо. Сроки уточняются.</li>
+      </ol>
+    </div>
+
+  </div></div>
+</section>
+
+<section class="quiz-sec">
+  <div class="wrap">
+    <p class="eyebrow">маленькая проверка</p>
+    <h2 class="chapter" style="margin-bottom:18px">А ты точно Аня?</h2>
+    <div class="quizcard">
+      <div class="dots" id="dots" aria-hidden="true"></div>
+      <div id="stage"></div>
+    </div>
+  </div>
+</section>
+
+<section class="quiz-sec" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">приложение к тесту</p>
+    <h2 class="chapter" style="margin-bottom:18px">Словарь Ани</h2>
+    <div class="dict rv">
+      <details>
+        <summary>Ну ёмае</summary>
+        <p>Высшая форма гнева. Дальше уже ничего нет. По этому сигналу Рокки покидает помещение.</p>
+      </details>
+      <details>
+        <summary>Пофиг + пофиг</summary>
+        <p>Исчерпывающее описание внутреннего мира Мироши. Подходит к любой ситуации без изменений.</p>
+      </details>
+      <details>
+        <summary>Сыночка-корзиночка</summary>
+        <p>Мироша. Полное имя используется только в поликлинике.</p>
+      </details>
+      <details>
+        <summary>Любимки</summary>
+        <p>Мы. И наши дети. И вообще все, кто нам дорог. Слово с очень широкой зоной действия.</p>
+      </details>
+    </div>
+
+    <div class="label-tag rv" style="margin-top:26px">
+      <h3>Аня · инструкция по уходу</h3>
+      <p class="comp">70% чистота<br>20% забота о своих<br>10% «сахарааааа»</p>
+      <ul>
+        <li>не стирать при 90° — она и так на пределе</li>
+        <li>не отбеливать, исходный цвет идеален</li>
+        <li>беречь от песка и мокрых следов в коридоре</li>
+        <li class="ok">сушить в тени, желательно спящей</li>
+        <li class="ok">хранить рядом с Ваней, Мирошей и Рокки</li>
+        <li class="ok">при обнаружении усталости — звонить Владе</li>
+      </ul>
+      <p class="made">Сделано в Чите · 1995</p>
+    </div>
+  </div>
+</section>
+
+<section class="quiz-sec" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">23 августа, ровно на стыке</p>
+    <h2 class="chapter" style="margin-bottom:6px">Лев и Дева одновременно</h2>
+    <p class="chapter-note" style="margin-bottom:18px">В этот день заканчивается один знак и начинается другой. Так и получилась ты.</p>
+    <div class="signs rv">
+      <div class="sign-card">
+        <h3>от льва</h3>
+        <ul>
+          <li>«Теперь мы гуляем вместе» — и никто не спорит</li>
+          <li>Любит Беллингема просто потому, что он секси</li>
+          <li>Голос, который слышно с другого конца площадки</li>
+          <li>Своих защищает молча и сразу</li>
+        </ul>
+      </div>
+      <div class="sign-card">
+        <h3>от девы</h3>
+        <ul>
+          <li>Самые чистые полы из всех, что я видела</li>
+          <li>Порошок и кондиционер как часть личности</li>
+          <li>Песочница — ежедневное испытание характера</li>
+          <li>Всё лежит там, где должно лежать</li>
+        </ul>
+      </div>
+    </div>
+    <p class="signs-sum rv">Итого: человек, который наведёт порядок и при этом останется главным по веселью.</p>
+  </div>
+</section>
+
+<section class="fortune-sec">
+  <div class="wrap">
+    <p class="eyebrow">на 31-й год</p>
+    <h2 class="chapter" style="margin-bottom:18px">Предсказание</h2>
+    <div class="fortune rv">
+      <p class="out dim" id="f-out">Нажми и узнай, что тебя ждёт. Можно несколько раз — судьба у нас гибкая.</p>
+      <button type="button" id="f-btn">узнать</button>
+    </div>
+  </div>
+</section>
+
+<section class="letter-sec">
+  <div class="wrap">
+    <div class="letter rv">
+      <h2>Что я хотела сказать</h2>
+      <p>Аня, полтора года назад я подошла к тебе на прогулке и, по твоей версии, сообщила, что теперь мы гуляем вместе. Это было лучшее решение за весь мой декрет.</p>
+      <p>Мы обе стали мамами впервые. Мы вместе не спали, вместе переживали каждый новый зуб, вместе гуглили ерунду в три часа ночи и вместе смеялись там, где по-хорошему надо было плакать. Всё самое трудное я делила с тобой — и от этого оно переставало быть страшным.</p>
+      <p>Я хочу, чтобы ты знала: я приду. Всегда, в любое время и по любому поводу — от «мне очень плохо» до «у меня закончился кондиционер для белья».</p>
+      <p>Спасибо, что ты у меня есть. Я тебя очень люблю. А наши любимки пусть и дальше — жених и невеста.</p>
+      <p class="sign">С днём рождения, любимка.<br>Твоя Влада</p>
+    </div>
+  </div>
+</section>
+
+<section class="cake-sec">
+  <div class="wrap">
+    <p class="eyebrow">и последнее</p>
+    <h2 class="chapter" style="margin-bottom:6px">Торт</h2>
+    <p class="chapter-note">Три свечки — три желания. Задувать телефоном.</p>
+
+    <div class="cake-stage rv in">
+      <div class="cake" id="cake" role="button" tabindex="0" aria-label="задуть свечку">
+        <div class="table-shadow"></div>
+        <div class="plate"></div>
+        <div class="tier-bottom"></div>
+        <div class="tier-top"></div>
+        <div class="icing-bottom"><span class="drip"></span><span class="drip"></span><span class="drip"></span><span class="drip"></span><span class="drip"></span><span class="drip"></span></div>
+        <div class="icing-top"><span class="drip"></span><span class="drip"></span><span class="drip"></span><span class="drip"></span><span class="drip"></span></div>
+        <div class="beads"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="upper-beads"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="cake-highlight-top"></div>
+        <div class="cake-highlight-bottom"></div>
+        <div class="candles">
+          <div class="candle"><span class="puff"></span><span class="flame"></span></div>
+          <div class="candle"><span class="puff"></span><span class="flame"></span></div>
+          <div class="candle"><span class="puff"></span><span class="flame"></span></div>
+        </div>
+      </div>
+      <p class="shake-hint" id="shake-hint"><span class="ic">&#128241;</span><span id="shake-txt">потряси телефон</span></p>
+      <div><button type="button" class="perm-btn" id="perm-btn" hidden>разрешить тряску</button></div>
+    </div>
+  </div>
+</section>
+
+<div class="wish" id="wish" aria-live="polite">
+  <div class="wish-card">
+    <p class="n" id="wish-n">первое желание</p>
+    <div id="wish-body"></div>
+    <p class="tap">нажми в любом месте &#8594;</p>
+  </div>
+</div>
+
+<p class="foot">23 августа 2026</p>
+</main>
+
+<script>
+(function(){
+  "use strict";
+
+  /* появление блоков */
+  function list(sel, root){ return Array.prototype.slice.call((root||document).querySelectorAll(sel)); }
+  var rv = list('.rv');
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.05});
+    rv.forEach(function(el){io.observe(el);});
+  } else {
+    rv.forEach(function(el){el.classList.add('in');});
+  }
+  setTimeout(function(){ rv.forEach(function(el){ el.classList.add('in'); }); }, 4000);
+
+  /* видео подгружаем только когда оно появилось в кадре */
+  (function(){
+    var vids = list('video');
+    if(!vids.length) return;
+    if(!('IntersectionObserver' in window)){
+      vids.forEach(function(v){ v.preload='auto'; v.load(); });
+      return;
+    }
+    var vo = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        var v = e.target;
+        if(e.isIntersecting){
+          if(!v.dataset.lit){ v.dataset.lit='1'; v.preload='auto'; v.load(); }
+          var p = v.play(); if(p && p.catch) p.catch(function(){});
+        } else if(!v.paused){ v.pause(); }
+      });
+    },{rootMargin:'200px 0px',threshold:.15});
+    vids.forEach(function(v){ vo.observe(v); });
+  })();
+
+  /* звук у видео */
+  list('[data-snd]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var v = btn.parentNode.querySelector('video');
+      list('video').forEach(function(o){
+        if(o!==v){ o.muted = true; }
+      });
+      list('[data-snd]').forEach(function(b){
+        if(b!==btn){ b.textContent = 'звук'; }
+      });
+      v.muted = !v.muted;
+      btn.textContent = v.muted ? 'звук' : 'без звука';
+      if(!v.muted){ v.play(); }
+    });
+  });
+
+  /* счётчик дружбы */
+  (function(){
+    var start = new Date(2025, 1, 2);
+    var days = Math.max(1, Math.floor((new Date() - start) / 86400000));
+    var walks = Math.round(days * 0.6 / 5) * 5;
+    var km = Math.round(walks * 2.5 / 10) * 10;
+    function put(id, val){
+      var el = document.getElementById(id);
+      if(!el) return;
+      var n = 0, steps = 28, i = 0;
+      var t = setInterval(function(){
+        i++;
+        n = Math.round(val * (1 - Math.pow(1 - i/steps, 3)));
+        el.textContent = n.toLocaleString('ru-RU');
+        if(i >= steps){ el.textContent = val.toLocaleString('ru-RU'); clearInterval(t); }
+      }, 32);
+    }
+    var box = document.querySelector('.counter');
+    function run(){ put('c-days', days); put('c-walks', walks); put('c-km', km); }
+    if(box && 'IntersectionObserver' in window){
+      var o2 = new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(e.isIntersecting){ run(); o2.disconnect(); } });
+      },{threshold:.4});
+      o2.observe(box);
+    } else { run(); }
+  })();
+
+  /* предсказание */
+  (function(){
+    var wishes = [
+      'В этом году ты выспишься. Один раз, но по-настоящему.',
+      'Полы будут чистыми целых сорок минут подряд.',
+      'Агата догонит Мирошу и обнимет. Он не убежит.',
+      'Рокки однажды не испугается. Отметь этот день в календаре.',
+      'Ваня скажет, что ты красивая, ровно тогда, когда это будет нужнее всего.',
+      'Джуд Беллингем останется секси. В мире должна быть стабильность.',
+      'Кто-то принесёт песок в дом. Ты справишься, ты всегда справляешься.',
+      'Мы выпьем кофе, пока дети спят. Оба. Одновременно. Горячий.',
+      'Ты найдёшь кондиционер для белья, который пахнет ещё лучше нынешнего.',
+      'Мироша скажет что-то такое, что ты простишь ему вообще всё.',
+      'Будет день, когда никто не заплачет до обеда.',
+      'Ты услышишь «сахарааааа» от Мироши. И поймёшь, что жизнь удалась.'
+    ];
+    var btn = document.getElementById('f-btn'),
+        out = document.getElementById('f-out'),
+        last = -1;
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+      var i;
+      do { i = Math.floor(Math.random() * wishes.length); } while(i === last && wishes.length > 1);
+      last = i;
+      out.className = 'out';
+      out.textContent = wishes[i];
+      btn.textContent = 'ещё раз';
+    });
+  })();
+
+  /* квиз */
+  var Q = [
+    { q:'Что кричит Аня, когда дети разбушевались после печенек?',
+      o:['«Тихо, я сказала»','«Сахарааааа»','«Кто это сделал?»','«Всё, домой»'], a:1,
+      f:'Одно слово — и всем всё понятно. Диагноз поставлен.' },
+    { q:'Как Аня зовёт Мирошу?',
+      o:['Мирослав Иванович','Пупсик','Сыночка-корзиночка','Мирошка-картошка'], a:2,
+      f:'Сыночка-корзиночка. Других вариантов не существует.' },
+    { q:'Чем пахнет от каждого члена этой семьи?',
+      o:['Кофе','Улицей','Свежевыстиранным бельём','Собакой'], a:2,
+      f:'Порошок и кондиционер. Даже от Рокки. Особенно от Рокки.' },
+    { q:'Что Мироша чувствует по любому поводу?',
+      o:['Пофиг + пофиг','Восторг','Тревогу','Голод'], a:0,
+      f:'Ровно два пофига. Ни больше, ни меньше.' },
+    { q:'За что Аня любит Джуда Беллингема?',
+      o:['Он гениально играет','Он секси','Он забил в финале','Он тоже из Читы'], a:1,
+      f:'Футбол тут вообще ни при чём, и мы обе это знаем.' },
+    { q:'Кто первым исчезает из комнаты, когда Мироша плачет, а Аня говорит «ну емае»?',
+      o:['Ваня','Агата','Рокки','Никто, все привыкли'], a:2,
+      f:'Рокки. Джек-рассел с самой тонкой душевной организацией.' },
+    { q:'С чего началась наша дружба?',
+      o:['Нас познакомили мужья','«Я Влада, теперь мы гуляем вместе»','Мы переписывались в чате мам','Мы лежали вместе в роддоме'], a:1,
+      f:'Твоя версия событий. Оспаривать её никто и не собирался.' },
+    { q:'Где родилась Аня?',
+      o:['Иркутск','Улан-Удэ','Чита','Владивосток'], a:2,
+      f:'Чита. 23 августа 1995 года. Самый важный день августа.' }
+  ];
+
+  var stage = document.getElementById('stage'),
+      dots  = document.getElementById('dots'),
+      idx = 0, score = 0;
+
+  Q.forEach(function(){ dots.appendChild(document.createElement('i')); });
+
+  function paintDots(){
+    var all = dots.children;
+    for(var i=0;i<all.length;i++){ all[i].className = i <= idx ? 'on' : ''; }
+  }
+
+  function render(){
+    paintDots();
+    var item = Q[idx];
+    stage.innerHTML = '';
+
+    var h = document.createElement('p');
+    h.className = 'qtext';
+    h.textContent = item.q;
+    stage.appendChild(h);
+
+    var box = document.createElement('div');
+    box.className = 'opts';
+    stage.appendChild(box);
+
+    item.o.forEach(function(text, i){
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'opt';
+      b.textContent = text;
+      b.addEventListener('click', function(){ answer(i, box); });
+      box.appendChild(b);
+    });
+  }
+
+  function answer(picked, box){
+    var item = Q[idx];
+    var btns = list('.opt', box);
+    btns.forEach(function(b,i){
+      b.disabled = true;
+      if(i === item.a){ b.classList.add('right'); }
+      else if(i === picked){ b.classList.add('wrong'); }
+    });
+    if(picked === item.a){ score++; }
+
+    var fb = document.createElement('p');
+    fb.className = 'fb';
+    fb.innerHTML = (picked === item.a ? '<b>Ну конечно.</b> ' : '<b>А вот и нет.</b> ') + item.f;
+    stage.appendChild(fb);
+
+    var nx = document.createElement('button');
+    nx.type = 'button';
+    nx.className = 'next';
+    nx.textContent = idx === Q.length - 1 ? 'посмотреть результат' : 'дальше';
+    nx.addEventListener('click', function(){
+      idx++;
+      if(idx < Q.length){ render(); } else { finish(); }
+      stage.scrollIntoView({block:'center', behavior:'smooth'});
+    });
+    stage.appendChild(nx);
+  }
+
+  function finish(){
+    paintDots();
+    var msg;
+    if(score === Q.length){
+      msg = 'Идеально. Ты знаешь себя так же хорошо, как свои полы — а это высшая оценка.';
+    } else if(score >= 6){
+      msg = 'Почти безупречно. Как кухня через десять минут после ужина.';
+    } else {
+      msg = 'Кажется, кто-то опять мало спал. Это нормально, мы в декрете.';
+    }
+    stage.innerHTML =
+      '<p class="score">' + score + '<small>&#8202;/&#8202;' + Q.length + '</small></p>' +
+      '<p class="fb" style="border:0;padding-top:0;margin-top:0">' + msg + '</p>' +
+      '<button type="button" class="again">пройти ещё раз</button>';
+    stage.querySelector('.again').addEventListener('click', function(){
+      idx = 0; score = 0; render();
+    });
+  }
+
+  render();
+})();
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var cake = document.getElementById('cake');
+  if(!cake) return;
+  var candles = cake.querySelectorAll('.candle');
+  var wish = document.getElementById('wish');
+  var wishN = document.getElementById('wish-n');
+  var wishBody = document.getElementById('wish-body');
+  var hint = document.getElementById('shake-hint');
+  var hintTxt = document.getElementById('shake-txt');
+  var permBtn = document.getElementById('perm-btn');
+
+  var W = [
+    {n:'первое желание', p:[
+      'Пусть этот год будет спокойным. Без «ой, что это за температура», без бессонных ночей подряд, без тревоги в три утра.',
+      'Хочу, чтобы ты просто выдохнула и поняла: можно не держать всё на себе. Ты и так вынесла столько, что хватит на трёх человек.'
+    ]},
+    {n:'второе желание', p:[
+      'Пусть у тебя будет много «твоего». Не мамского, не женского, не по расписанию — а просто твоего.',
+      'Твой кофе, пока он горячий. Твоя прогулка без коляски. Твоя музыка в наушниках. Ты всё это заслужила, и я всегда подхвачу Мирошу, чтобы оно у тебя было.'
+    ]},
+    {n:'третье желание', p:[
+      'А третье — не про год, а вообще. Пусть мы гуляем ещё очень долго: с самокатами, потом с их школьными портфелями, потом просто вдвоём.',
+      'Ты у меня одна такая. Спасибо, что ты есть.',
+      'С днём рождения, любимка. Твоя Влада.'
+    ]}
+  ];
+
+  var idx = 0, busy = false, armed = true;
+
+  function show(i){
+    wishN.textContent = W[i].n;
+    wishBody.innerHTML = W[i].p.map(function(t){ return '<p>' + t + '</p>'; }).join('');
+    wish.classList.add('on');
+  }
+
+  function hide(){
+    if(!wish.classList.contains('on')) return;
+    wish.classList.remove('on');
+    if(idx >= W.length){
+      hintTxt.textContent = 'все три загаданы';
+      hint.classList.add('calm');
+    } else {
+      hintTxt.textContent = idx === 1 ? 'потряси ещё раз' : 'осталась последняя';
+      setTimeout(function(){ armed = true; }, 500);
+    }
+    busy = false;
+  }
+  wish.addEventListener('click', hide);
+
+  function blow(){
+    if(busy || !armed || idx >= W.length) return;
+    busy = true; armed = false;
+    cake.classList.remove('wob');
+    void cake.offsetWidth;
+    cake.classList.add('wob');
+    candles[idx].classList.add('out');
+    idx++;
+    setTimeout(function(){ show(idx-1); }, 700);
+  }
+
+  cake.addEventListener('click', blow);
+  cake.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); blow(); }
+  });
+
+  var last = 0, lx = null, ly = null, lz = null;
+  function onMotion(e){
+    var a = e.accelerationIncludingGravity || e.acceleration;
+    if(!a || typeof a.x !== 'number') return;
+    if(lx === null){ lx = a.x; ly = a.y; lz = a.z; return; }
+    var d = Math.abs(a.x - lx) + Math.abs(a.y - ly) + Math.abs(a.z - lz);
+    lx = a.x; ly = a.y; lz = a.z;
+    var now = Date.now();
+    if(d > 22 && now - last > 900){ last = now; blow(); }
+  }
+  function listen(){ window.addEventListener('devicemotion', onMotion, false); }
+
+  var DM = window.DeviceMotionEvent;
+  if(DM && typeof DM.requestPermission === 'function'){
+    permBtn.hidden = false;
+    permBtn.addEventListener('click', function(){
+      DM.requestPermission().then(function(res){
+        permBtn.hidden = true;
+        if(res === 'granted'){ listen(); }
+        else { hintTxt.textContent = 'тогда просто нажми на торт'; hint.classList.add('calm'); }
+      }).catch(function(){
+        permBtn.hidden = true;
+        hintTxt.textContent = 'тогда просто нажми на торт';
+        hint.classList.add('calm');
+      });
+    });
+  } else if(DM){
+    listen();
+  } else {
+    hintTxt.textContent = 'нажми на торт';
+    hint.classList.add('calm');
+  }
+})();
+</script>
+<script>
+(function(){
+  "use strict";
+  var cv = document.getElementById('confetti');
+  if(!cv || !cv.getContext) return;
+  var ctx = cv.getContext('2d');
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+  var W = 0, H = 0;
+  function size(){
+    W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  size();
+  window.addEventListener('resize', size);
+
+  var COL = ['#D9A3AD','#B6A182','#4E7695','#FDF7F3','#8CA0AF'];
+  var P = [];
+  for(var i=0;i<90;i++){
+    P.push({
+      x: Math.random()*W,
+      y: -20 - Math.random()*H*0.8,
+      w: 5 + Math.random()*5,
+      h: 8 + Math.random()*7,
+      vy: 40 + Math.random()*70,
+      vx: -18 + Math.random()*36,
+      rot: Math.random()*Math.PI,
+      vr: -2.4 + Math.random()*4.8,
+      c: COL[(Math.random()*COL.length)|0]
+    });
+  }
+
+  var DUR = 4000, FADE = 900, t0 = null;
+  function frame(t){
+    if(t0 === null) t0 = t;
+    var el = t - t0, dt = 1/60;
+    if(el > DUR){ ctx.clearRect(0,0,W,H); return; }
+    var alpha = el > DUR - FADE ? Math.max(0,(DUR - el)/FADE) : 1;
+    ctx.clearRect(0,0,W,H);
+    ctx.globalAlpha = alpha;
+    for(var i=0;i<P.length;i++){
+      var p = P[i];
+      p.y += p.vy*dt; p.x += p.vx*dt; p.rot += p.vr*dt;
+      if(p.y > H + 30){ p.y = -20; p.x = Math.random()*W; }
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      ctx.fillStyle = p.c;
+      ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
+      ctx.restore();
+    }
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
